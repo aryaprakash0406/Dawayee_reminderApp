@@ -1,3 +1,4 @@
+import 'package:dawayee/utils/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatelessWidget {
@@ -5,20 +6,17 @@ class SplashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size;
     return Container(
-      decoration: const BoxDecoration(
-        gradient: LinearGradient(colors: [
-          Color.fromRGBO(77, 105, 220, 100),
-          Color.fromRGBO(28, 54, 161, 100)
-        ], begin: Alignment.topLeft, end: Alignment.topRight),
-      ),
+      decoration: const BoxDecoration(gradient: AppColors.colorPrimary),
       child: Center(
         child: Image(
-          image: AssetImage('assets/images/Logo.png'),
-          width: 200.0,
-          height: 200.0,
+          image: const AssetImage('assets/images/Logo.png'),
+          width: size.width / 2,
+          height: size.width / 2,
         ),
       ),
     );
   }
 }
+

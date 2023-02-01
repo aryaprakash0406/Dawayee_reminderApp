@@ -1,4 +1,6 @@
 import 'package:dawayee/splash_screen.dart';
+import 'package:dawayee/utils/app_colors.dart';
+import 'package:dawayee/welcome.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,8 +12,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: SplashScreen(),
+    return const MaterialApp(
+      home: WelcomePage(),
       debugShowCheckedModeBanner: false,
     );
   }
