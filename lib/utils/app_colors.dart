@@ -11,7 +11,9 @@ static const colorSecondary =  LinearGradient(colors: [
 ], begin: Alignment.topCenter, end: Alignment.topRight);
 
  static const colorTertiary = Color.fromRGBO(196, 196, 196, 100);
-
+static const colorBackground =  LinearGradient(colors: [
+  Color.fromRGBO(244, 246, 255,100),Color.fromRGBO( 234, 237, 246,100),Color.fromRGBO( 224, 230, 254,100)
+], begin: Alignment.topCenter, end: Alignment.topRight);
 // ThemeData lightTheme = ThemeData(
 //   brightness: Brightness.light,
 //   primaryColor: COLOR_PRIMARY;

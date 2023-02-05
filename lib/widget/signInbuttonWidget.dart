@@ -8,6 +8,7 @@ class SignInButtonWidget extends StatelessWidget {
   final Gradient gradient;
   final VoidCallback? onPressed;
   final Widget child;
+  final Icon? icon;
 
   const SignInButtonWidget({
     Key? key,
@@ -17,7 +18,8 @@ class SignInButtonWidget extends StatelessWidget {
     this.width,
     this.height = 44.0,
     this.gradient = AppColors.colorSecondary,
-  }): super(key: key);
+    this.icon,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
