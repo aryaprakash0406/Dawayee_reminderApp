@@ -1,5 +1,6 @@
 import 'dart:developer';
 import 'package:dawayee/provider/google_sign_in.dart';
+import 'package:dawayee/screens/landing_page.dart';
 import 'package:dawayee/screens/welcome.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
     return ChangeNotifierProvider(
         create: (_) => GoogleSignInProvider(),
         child: const MaterialApp(
-          home: WelcomePage(),
+          home: LandingPage(),
           debugShowCheckedModeBanner: false,
         ));
   }
