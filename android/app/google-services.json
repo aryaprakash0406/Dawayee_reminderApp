@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "621911305644",
+    "project_id": "medicinereminderapp-a77f1",
+    "storage_bucket": "medicinereminderapp-a77f1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:621911305644:android:b981f405de854fe4291e09",
+        "android_client_info": {
+          "package_name": "com.example.dawayee"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "621911305644-19h5ge2j5ia11j0m0rffdta8er1gh6tp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADUDKcncNU9uOYPIgzHJYNFMhqzVMSaeM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "621911305644-19h5ge2j5ia11j0m0rffdta8er1gh6tp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
