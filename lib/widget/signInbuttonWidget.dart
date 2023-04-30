@@ -7,18 +7,18 @@ class SignInButtonWidget extends StatelessWidget {
   final double height;
   final Gradient gradient;
   final VoidCallback? onPressed;
-  final Widget child;
-  final Icon? icon;
+  final String buttonName;
+  final String? trailingIcon;
 
   const SignInButtonWidget({
     Key? key,
     required this.onPressed,
-    required this.child,
+    required this.buttonName,
     this.borderRadius,
     this.width,
     this.height = 44.0,
     this.gradient = AppColors.colorSecondary,
-    this.icon,
+    this.trailingIcon,
   }) : super(key: key);
 
   @override
@@ -31,14 +31,28 @@ class SignInButtonWidget extends StatelessWidget {
         gradient: gradient,
         borderRadius: borderRadius,
       ),
-      child: ElevatedButton(
-        onPressed: onPressed,
-        style: ElevatedButton.styleFrom(
-          backgroundColor: Colors.transparent,
-          shadowColor: Colors.transparent,
-          shape: RoundedRectangleBorder(borderRadius: borderRadius),
-        ),
-        child: child,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Image(image: AssetImage(trailingIcon!)),
+          ElevatedButton(
+            onPressed: onPressed,
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.transparent,
+              shadowColor: Colors.transparent,
+              shape: RoundedRectangleBorder(borderRadius: borderRadius),
+            ),
+            child: Text(
+              buttonName,
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontFamily: 'Monteserrat',
+                fontSize: 15,
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }

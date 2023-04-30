@@ -32,54 +32,68 @@ class MedicineCardWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
-    return Container(
-      width: size.width,
-      height: size.width / 4,
-      padding: EdgeInsets.all(14),
-      child: Card(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(15),
-        ),
-        child: Row(
-          children: <Widget>[
-            Flexible(
-              flex: 1,
-              fit: FlexFit.tight,
-              child: Image(image: pillImage,),
-            ),
-            const SizedBox(
-              width: 20,
-            ),
-            Flexible(
-              flex: 1,
-              fit: FlexFit.tight,
-              child: Column(
-                children: [
-                  Text(medicineName),
-                  Text(catagory),
-                ],
-              ),
-            ),
-            const VerticalDivider(
-              color: Colors.black,
-              thickness: 1,
-            ),
-            const SizedBox(
-              width: 20,
-            ),
-            Flexible(
-              flex: 1,
-              fit: FlexFit.tight,
-              child: Column(
-                children: [
-                  Text(timing),
-                  Text(toeat),
-                  Text(whenToEat)
-                ],
-              ),
-            ),
-          ],
-        ),
+    return Card(
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(15),
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          // Flexible(
+          //   flex: 1,
+          //   fit: FlexFit.tight,
+          //   child: Image(
+          //     image: pillImage,
+          //   ),
+          // ),
+          // const SizedBox(
+          //   width: 20,
+          // ),
+          // Flexible(
+          //   flex: 1,
+          //   fit: FlexFit.tight,
+          //   child: Column(
+          //     children: [
+          //       Text(medicineName),
+          //       Text(catagory),
+          //     ],
+          //   ),
+          // ),
+          // const VerticalDivider(
+          //   color: Colors.black,
+          //   thickness: 1,
+          // ),
+          // const SizedBox(
+          //   width: 20,
+          // ),
+          // Flexible(
+          //   flex: 1,
+          //   fit: FlexFit.tight,
+          //   child: Column(
+          //     children: [Text(timing), Text(toeat), Text(whenToEat)],
+          //   ),
+          // ),
+           Image(
+               image: pillImage,
+             ),
+             const SizedBox(
+             width: 20,
+             ),
+             Column(
+               children: [
+                 Text(medicineName),
+                 Text(catagory),
+               ],
+             ),
+             const VerticalDivider(
+             color: Colors.black,
+             thickness: 1,
+           ),
+           Column(
+               children: [Text(timing), Text(toeat), Text(whenToEat)],
+             ),
+        ],
       ),
     );
   }
